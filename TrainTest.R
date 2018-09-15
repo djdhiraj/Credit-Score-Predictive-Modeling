@@ -4,6 +4,4 @@ d = sort(sample(nrow(credit), nrow(credit)*.6))
 train<-data[d,]
 #select test sample
 test<-data[-d,]
-
-
 train<-subset(train,select=-default)
