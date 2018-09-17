@@ -37,6 +37,16 @@ iris %>%
 iris %>%
   group_by(Species) %>%
   summarise(Number.Of.Species = n())
+df %>% summarise(avg_sleep = mean(PetalLengthCm), 
+          min_sleep = min(PetalLengthCm),
+          max_sleep = max(PetalLengthCm),
+          total = n())
+df%>% 
+  group_by(Species) %>%
+  summarise(avg_sleep = mean(PetalLengthCm), 
+            min_sleep = min(PetalLengthCm), 
+            max_sleep = max(PetalLengthCm),
+            total = n())
 iris %>%
   group_by(Species) %>%
   summarise(Number.Of.Samples = n(),
