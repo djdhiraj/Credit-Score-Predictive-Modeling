@@ -1,10 +1,10 @@
 ---
-title: "My_First"
+title: "My_First_Document"
 author: "Dhiraj"
 date: "September 28, 2018"
 output: html_document
 ---
-Is theis you name 
+The measurements from red wine,white wine
 ```{r}
 library(gtools)
 df_red=read.csv(file.choose("C:/Users/Govind/winequality-red.csv"),sep = ";")
@@ -15,6 +15,13 @@ head(wines)
 * Then we'll see the summary:
 ```{r}
 summary(wines)
+```
+**Distribution of Quality Scores**
+```{r}
+ggplot(wines) +
+ geom_bar(aes(x = factor(quality), fill = type),
+ position = 'dodge') +
+ xlab('Quality') + ylab('Frequency')
 ```
 
 
