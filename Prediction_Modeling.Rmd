@@ -16,6 +16,12 @@ head(wines)
 ```{r}
 summary(wines)
 ```
+There are 11 measurements for each wine, and each wine has an associated quality score based on
+sensory data. At least three wine experts judged and scored the wine on a scale between 0 and 10. No wine
+achieved a score below 3 or above 9. There are no missing values. There is not really any measurement
+that we want to translate into categorical data. The quality scores are given as discrete values, but they are
+ordered categories
+
 **Distribution of Quality Scores**
 ```{r}
 ggplot(wines) +
