@@ -66,4 +66,10 @@ class(filenames)
 filenames[1:3]
 write.table(filenames,file="path.txt",col.names=F,quote=F)
 data<-read.csv(file.choose())
-
+# Web scraping coding in R 
+url_college<-"https://www.thecompleteuniversityguide.co.uk/league-tables/rankings?s=Music"
+url_college %>%
+  read_html() %>%
+  html_nodes('.league-table-institution-name') %>%
+  html_text() %>%
+  str_replace_all("(^[^a-zA-Z]+)|([^a-zA-Z]+$)", "")
