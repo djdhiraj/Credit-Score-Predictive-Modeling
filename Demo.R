@@ -51,3 +51,19 @@ iris %>%
   group_by(Species) %>%
   summarise(Number.Of.Samples = n(),
             Mean.Petal.Length = mean(Petal.Length))
+
+#Web scraping in r
+str_extract(data1,"card--floating ")
+str_extract_all(data1,"card--floating ")
+length(str_extract(data1,"div class"))
+class(data3)
+ftp <- "ftp://cran.r-project.org/pub/R/web/views/"
+ftp_files <- getURL(ftp, dirlistonly = TRUE)
+ftp_files
+filenames <- str_split(ftp_files, "\r\n")[[1]]
+filenames
+class(filenames)
+filenames[1:3]
+write.table(filenames,file="path.txt",col.names=F,quote=F)
+data<-read.csv(file.choose())
+
