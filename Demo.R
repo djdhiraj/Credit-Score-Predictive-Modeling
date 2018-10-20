@@ -73,3 +73,23 @@ url_college %>%
   html_nodes('.league-table-institution-name') %>%
   html_text() %>%
   str_replace_all("(^[^a-zA-Z]+)|([^a-zA-Z]+$)", "")
+str_extract(data1,"card--floating ")
+str_extract_all(data1,"card--floating ")
+length(str_extract(data1,"div class"))
+class(data3)
+ftp <- "ftp://cran.r-project.org/pub/R/web/views/"
+ftp_files <- getURL(ftp, dirlistonly = TRUE)
+ftp_files
+filenames <- str_split(ftp_files, "\r\n")[[1]]
+filenames
+class(filenames)
+filenames[1:3]
+write.table(filenames,file="path.txt",col.names=F,quote=F)
+data<-read.csv(file.choose())
+
+df5<-sqldf("select max(age),education,loan from df2 ")
+df5<-sqldf("select job, age from df where age > 30 group by job order by age")
+rowst1s <- which(grepl(stron1start, stron))
+df1<-sqldf("select * from df where job='skilled employee' and credit_history ='repaid'")
+df4<- sqldf("select sum(balance) from df2")
+
