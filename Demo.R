@@ -95,4 +95,6 @@ df4<- sqldf("select sum(balance) from df2")
 df5<-sqldf("Select test_data.amount from training_data,test_data where 'test_data.porpose'='training_data.purpose'")
 df5<-sqldf("Select test_data.amount from training_data,test_data where 'test_data.porpose'='training_data.purpose'")
 df5<-sqldf("Select test_data.amount from training_data,test_data where test_data.amount==training_data.amount")
-
+df5<-sqldf("Select purpose from training_data where amount > (select avg(amount) from training_data)")
+df6<-sqldf("select job from training_data where purpose in (
++ Select purpose from training_data where amount > (select avg(amount) from training_data))")
