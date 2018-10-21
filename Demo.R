@@ -92,4 +92,7 @@ df5<-sqldf("select job, age from df where age > 30 group by job order by age")
 rowst1s <- which(grepl(stron1start, stron))
 df1<-sqldf("select * from df where job='skilled employee' and credit_history ='repaid'")
 df4<- sqldf("select sum(balance) from df2")
+df5<-sqldf("Select test_data.amount from training_data,test_data where 'test_data.porpose'='training_data.purpose'")
+df5<-sqldf("Select test_data.amount from training_data,test_data where 'test_data.porpose'='training_data.purpose'")
+df5<-sqldf("Select test_data.amount from training_data,test_data where test_data.amount==training_data.amount")
 
